@@ -7,6 +7,8 @@ load_dotenv()
 api_key = os.environ.get("OWM_API_KEY")
 account_sid = os.environ.get("ACCOUNT_SID")
 auth_token = os.environ.get("AUTH_TOKEN")
+phone_from = os.environ.get("PHONE_FROM")
+phone_to = os.environ.get("PHONE_TO")
 
 params = {
     "lat" : 33.8,
@@ -32,6 +34,6 @@ if rain:
     client = Client(account_sid, auth_token)
     message = client.messages.create(
         body="Hewo, it will rain on in the next 12 hours",
-        from_="whatsapp:+14155238886",
-        to="whatsapp:+16572466100",
+        from_=phone_from,
+        to=phone_to,
     )
