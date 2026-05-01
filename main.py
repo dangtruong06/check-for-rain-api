@@ -4,13 +4,13 @@ from dotenv import load_dotenv
 from twilio.rest import Client
 load_dotenv()
 
-api_key = os.getenv("OWM_API_KEY")
-account_sid = os.getenv("ACCOUNT_SID")
-auth_token = os.getenv("AUTH_TOKEN")
+api_key = os.environ.get("OWM_API_KEY")
+account_sid = os.environ.get("ACCOUNT_SID")
+auth_token = os.environ.get("AUTH_TOKEN")
 
 params = {
-    "lat" : 30.6,
-    "lon": 94.25,
+    "lat" : 33.8,
+    "lon": -118.009,
     "cnt": 4,
     "units": "imperial",
     "appid": api_key
