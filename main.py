@@ -1,8 +1,6 @@
 import requests
 import os
-from dotenv import load_dotenv
 from twilio.rest import Client
-load_dotenv()
 
 api_key = os.environ.get("OWM_API_KEY")
 account_sid = os.environ.get("ACCOUNT_SID")
